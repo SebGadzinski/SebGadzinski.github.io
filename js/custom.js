@@ -52,7 +52,7 @@ $(window).bind('mousewheel', function(event) {
 
 $('html, body').animate({ scrollTop: 0 }, 'fast', function(){
     let id = window.location.hash;
-    if(id){
+    if(id && id !== "#"){
         let noHashId = id.substring(1);
         let section = document.getElementById(noHashId);
         revealAllSectionsUpUntil(noHashId);
