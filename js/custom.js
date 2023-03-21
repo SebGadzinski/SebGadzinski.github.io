@@ -1,4 +1,5 @@
 function shouldBeVisible(element) {
+    if($(element).hasClass("seen")) return;
     const rect = element.getBoundingClientRect();    
 
     if($(element).attr("id") === "about"){
@@ -12,21 +13,8 @@ function shouldBeVisible(element) {
     }
 }
 
-function scrollEvent(event){
-    if (event.originalEvent.wheelDelta >= 0) {
-        //Scroll up
-    }
-    else {
-        //Scroll down
-        sections.forEach(function(section) {
-            if (shouldBeVisible(section)) {
-                showSection(section);
-            }
-        });
-    }
-}
-
 function showSection(section){
+    $(section).addClass("seen");
     $(section).find(" > *").each((index, el) =>{
         $(el).removeClass("hidden");
         $(el).css("display", "flex");
@@ -46,9 +34,13 @@ function revealAllSectionsUpUntil(sectionId){
 //== Set Up ==
 
 const sections = document.querySelectorAll('.full-page-section');
-$(window).bind('mousewheel', function(event) {
-    scrollEvent(event);
-});
+$(window).on("scroll", function(){
+    sections.forEach(function(section) {
+        if (shouldBeVisible(section)) {
+            showSection(section);
+        }
+    });
+})
 
 $('html, body').animate({ scrollTop: 0 }, 'fast', function(){
     let id = window.location.hash;
