@@ -30,7 +30,7 @@ tools_option = {
       radius: '55%',
       center: ['50%', '50%'],
       data: [
-        { value: 10, name: 'NuGet' },
+        { value: 7, name: 'NuGet' },
         { value: 8, name: 'VS' },
         { value: 8, name: 'Azure Pipelines' },
         { value: 7, name: 'Azure Data Studio' },
