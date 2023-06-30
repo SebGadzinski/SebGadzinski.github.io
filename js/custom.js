@@ -57,5 +57,10 @@ $('html, body').animate({ scrollTop: 0 }, 'fast', function(){
 });
 
 $(".nav-item > a").each((index, link) =>{
-    $(link).on("click",(e) => revealAllSectionsUpUntil($(e.target).attr("href")));
+    $(link).on("click", (e) => {
+        revealAllSectionsUpUntil($(e.target).attr("href"));
+        if(window.matchMedia("(max-width: 900px)").matches){
+            $(".navbar-toggler").trigger("click");
+        }
+    });
 });

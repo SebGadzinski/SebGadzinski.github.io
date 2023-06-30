@@ -109,8 +109,7 @@ a, a:visited, a::before,#contact {
         height: 20rem;
     }
     .work-card{
-        width: fit-content;
-        max-width: 70vw;
+        width: 70vw;
         height: fit-content;
     }
     .project-card{
@@ -134,13 +133,12 @@ a, a:visited, a::before,#contact {
         height: 28rem;
     }
     .work-card{
-        width: fit-content;
-        max-width: 70vw;
+        width: 70vw;
         height: fit-content;
     }
     .project-card{
         width: 25vw;
-        height: fit-content;
+        height: 300px;
     }
     .section-content{
         align-items: center;
