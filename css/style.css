@@ -70,8 +70,8 @@ section > div{
     background-color: rgb(201, 201, 201);
 }
 
-a, a:visited, a::before,#contact { 
-    text-decoration: none !important; 
+a, a:visited, a::before,#contact {
+    text-decoration: none !important;
 }
 
 /*Phone*/
@@ -124,13 +124,13 @@ a, a:visited, a::before,#contact {
 /*Desktop*/
 @media (min-width: 1024px) {
     .skill-card{
-        width: 33rem;
-        height: 33rem;
+        width: 23rem;
+        height: 23rem;
         margin: 10px auto;
     }
     .skill-graph{
-        width: 28rem;
-        height: 28rem;
+        width: 20rem;
+        height: 20rem;
     }
     .work-card{
         width: 70vw;

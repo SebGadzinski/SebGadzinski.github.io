@@ -1,6 +1,6 @@
 function shouldBeVisible(element) {
     if($(element).hasClass("seen")) return;
-    const rect = element.getBoundingClientRect();    
+    const rect = element.getBoundingClientRect();
 
     if($(element).attr("id") === "about"){
         return (
@@ -29,6 +29,20 @@ function revealAllSectionsUpUntil(sectionId){
         showSection(sections[i]);
         if(sectionId === $(sections[i]).attr("id")) break;
     }
+}
+
+function copyEmail() {
+    var emailElement = document.querySelector('.card span');
+    var email = emailElement.textContent || emailElement.innerText;
+
+    var tempElement = document.createElement('textarea');
+    tempElement.value = email;
+    document.body.appendChild(tempElement);
+    tempElement.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempElement);
+
+    alert('Email copied to clipboard: ' + email);
 }
 
 //== Set Up ==
